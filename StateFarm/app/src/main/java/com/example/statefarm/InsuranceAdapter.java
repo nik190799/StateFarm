@@ -64,12 +64,6 @@ public class InsuranceAdapter extends RecyclerView.Adapter<InsuranceAdapter.MyVi
                     insuranceLayout1.setVisibility(v);
                 }
             });
-
-
-
-
-
-
         }
     }
 

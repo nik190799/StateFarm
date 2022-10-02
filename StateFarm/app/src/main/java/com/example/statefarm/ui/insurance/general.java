@@ -30,7 +30,6 @@ public class general extends Fragment {
     ArrayList<Insurance> list;
     InsuranceAdapter insuranceAdapter;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
