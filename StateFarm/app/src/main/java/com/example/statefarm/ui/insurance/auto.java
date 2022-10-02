@@ -1,49 +1,59 @@
 package com.example.statefarm.ui.insurance;
 
+import android.animation.LayoutTransition;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import android.transition.AutoTransition;
+import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.statefarm.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link auto#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class auto extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    //car card
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    LinearLayout carLayout,carLayout1;
+    CardView carCard;
+
+    //motor card
+    LinearLayout motorLayout,motorLayout1;
+    CardView motorCard;
+
+    //boat card
+
+    LinearLayout boatLayout,boatLayout1;
+    CardView boatCard;
+
+    //atv card
+    LinearLayout atvLayout,atvLayout1;
+    CardView atvCard;
+
+
+    //rv card
+    LinearLayout rvLayout,rvLayout1;
+    CardView rvCard;
+
+
+    //rsa card
+    LinearLayout rsaLayout,rsaLayout1;
+    CardView rsaCard;
 
     public auto() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment auto.
-     */
-    // TODO: Rename and change types and number of parameters
     public static auto newInstance(String param1, String param2) {
         auto fragment = new auto();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -51,16 +61,106 @@ public class auto extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_auto, container, false);
+        View view = inflater.inflate(R.layout.fragment_auto, container, false);
+
+        //car
+        carLayout1 = view.findViewById(R.id.carLayout1);
+        carLayout = view.findViewById(R.id.carLayout);
+        carLayout.getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
+        carCard = view.findViewById(R.id.carCard);
+
+        carCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int v = (carLayout1.getVisibility() == View.GONE)? View.VISIBLE: View.GONE;
+                TransitionManager.beginDelayedTransition(carLayout, new AutoTransition());
+                carLayout1.setVisibility(v);
+            }
+        });
+
+        //motor
+        motorLayout1 = view.findViewById(R.id.motorLayout1);
+        motorLayout = view.findViewById(R.id.motorLayout);
+        motorLayout.getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
+        motorCard = view.findViewById(R.id.motorCard);
+        motorCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int v = (motorLayout1.getVisibility() == View.GONE)? View.VISIBLE: View.GONE;
+                TransitionManager.beginDelayedTransition(motorLayout, new AutoTransition());
+                motorLayout1.setVisibility(v);
+            }
+        });
+
+
+
+        //boat
+        boatLayout1 = view.findViewById(R.id.boatLayout1);
+        boatLayout = view.findViewById(R.id.boatLayout);
+        boatLayout.getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
+        boatCard = view.findViewById(R.id.boatCard);
+        boatCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int v = (boatLayout1.getVisibility() == View.GONE)? View.VISIBLE: View.GONE;
+                TransitionManager.beginDelayedTransition(boatLayout, new AutoTransition());
+                boatLayout1.setVisibility(v);
+            }
+        });
+
+
+        //atv
+        atvLayout1 = view.findViewById(R.id.atvLayout1);
+        atvLayout = view.findViewById(R.id.atvLayout);
+        atvLayout.getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
+        atvCard = view.findViewById(R.id.atvCard);
+        atvCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int v = (atvLayout1.getVisibility() == View.GONE)? View.VISIBLE: View.GONE;
+                TransitionManager.beginDelayedTransition(atvLayout, new AutoTransition());
+                atvLayout1.setVisibility(v);
+            }
+        });
+
+        //rv
+        rvLayout1 = view.findViewById(R.id.rvLayout1);
+        rvLayout = view.findViewById(R.id.rvLayout);
+        rvLayout.getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
+        rvCard = view.findViewById(R.id.rvCard);
+        rvCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int v = (rvLayout1.getVisibility() == View.GONE)? View.VISIBLE: View.GONE;
+                TransitionManager.beginDelayedTransition(rvLayout, new AutoTransition());
+                rvLayout1.setVisibility(v);
+            }
+        });
+
+        //rsa
+        rsaLayout1 = view.findViewById(R.id.rsaLayout1);
+        rsaLayout = view.findViewById(R.id.rsaLayout);
+        rsaLayout.getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
+        rsaCard = view.findViewById(R.id.rsaCard);
+        rsaCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int v = (rsaLayout1.getVisibility() == View.GONE)? View.VISIBLE: View.GONE;
+                TransitionManager.beginDelayedTransition(rsaLayout, new AutoTransition());
+                rsaLayout1.setVisibility(v);
+            }
+        });
+
+        return view;
     }
+
 }

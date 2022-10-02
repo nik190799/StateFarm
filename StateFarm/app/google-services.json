@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "851466625315",
+    "project_id": "statefarm-a5f6b",
+    "storage_bucket": "statefarm-a5f6b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851466625315:android:9fe4f0de767942e7352c96",
+        "android_client_info": {
+          "package_name": "com.example.statefarm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "851466625315-fjn1iopht6re96ed45mb2qqrkdf9b178.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCg6-ENokQjHXCP4X_K94juYnRymR0cq3s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "851466625315-fjn1iopht6re96ed45mb2qqrkdf9b178.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
