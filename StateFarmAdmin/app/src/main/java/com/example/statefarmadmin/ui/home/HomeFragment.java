@@ -59,7 +59,11 @@ public class HomeFragment extends Fragment {
             public void onClick(View v)
             {
                 dbRef = FirebaseDatabase.getInstance().getReference().child("Insurance/"+spinner.getSelectedItem().toString());
+                if(insuranceName.getText() == null || insuranceDescription.getText() == null || webLink.getText() == null){
+                    Toast.makeText(getContext(),"Please enter input!!!",Toast.LENGTH_LONG).show();
+                }else {
                 insertData();
+                }
             }
         });
 

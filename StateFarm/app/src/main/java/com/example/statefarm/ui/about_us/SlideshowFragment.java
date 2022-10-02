@@ -50,7 +50,11 @@ public class SlideshowFragment extends Fragment {
             public void onClick(View v)
             {
                 dbRef = FirebaseDatabase.getInstance().getReference().child("Insurance/Users");
+                if(emailText.getText() == null || firstNameText.getText() == null || lastNameText.getText() == null || phoneText.getText() == null || zipcode.getText() == null){
+                    Toast.makeText(getContext(),"Please enter input!!!",Toast.LENGTH_LONG).show();
+                }else {
                 insertData();
+                }
             }
         });
 
