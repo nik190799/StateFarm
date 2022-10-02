@@ -37,7 +37,6 @@ public class general extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_general, container, false);
 
-
         recyclerView = view.findViewById(R.id.insuranceList);
         database = FirebaseDatabase.getInstance().getReference("Insurance/General");
         recyclerView.setHasFixedSize(true);

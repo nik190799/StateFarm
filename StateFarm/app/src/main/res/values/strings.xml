@@ -18,6 +18,6 @@
     <string name="hello_blank_auto">Hello blank auto</string>
     <string name="hello_blank_general">Hello blank general</string>
     <string name="hello_blank_guide">Hello blank guide</string>
-
+    <string name="car_hyperlink"><a href="https://www.statefarm.com/insurance/auto">Learn more...</a></string>
 
 </resources>
