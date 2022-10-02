@@ -2,6 +2,8 @@ package com.example.statefarm;
 
 import android.animation.LayoutTransition;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.transition.AutoTransition;
@@ -63,8 +65,6 @@ public class InsuranceAdapter extends RecyclerView.Adapter<InsuranceAdapter.MyVi
                 }
             });
 
-            description.setClickable(true);
-            description.setMovementMethod(LinkMovementMethod.getInstance());
 
 
 
@@ -87,6 +87,17 @@ public class InsuranceAdapter extends RecyclerView.Adapter<InsuranceAdapter.MyVi
         Insurance i = list.get(position);
         holder.insuranceName.setText(i.getInsuranceName());
         holder.description.setText(i.getDescription());
+
+        holder.link.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Uri uri = Uri.parse(i.getLink()); // missing 'http://' will cause crashed
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                context.startActivity(intent);
+            }
+        });
 
         //String text = String.format("<a href='www.google.com'> Learn More...</a>", i.getLink());
 

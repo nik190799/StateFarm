@@ -39,7 +39,7 @@
 
                 <TextView
                     android:id="@+id/insuranceHeader"
-                    android:layout_width="wrap_content"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginLeft="20dp"
@@ -64,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/insuranceText"
@@ -86,7 +86,7 @@
                     android:layout_marginBottom="5dp"
                     android:clickable="false"
                     android:linksClickable="true"
-                    android:text="@string/car_hyperlink"
+                    android:text="Learn more..."
                     android:textColor="@android:color/holo_blue_light"
                     android:textStyle="bold|italic" />
 
